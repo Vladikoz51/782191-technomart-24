@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт каталог</title>
+  </head>
+  <body>
+    <header class="site-header">
+        <section class="site-header__search-and-order">
+        <span class="site-header__site-logo"><a href="index.html">Техномарт</a></span>
+        <div class="site-header__search-field">
+            <img class="icon search-icon" src="img/" alt="search-icon">
+            <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
+        </div>
+        <div class="site-header__bookmarks">
+            <img class="icon bookmark-icon" src="img/" alt="bookmark">
+            <span>Закладки:</span>
+            <!-- Как сделать вывод количества закладок пока непонятно. -->
+        </div>
+        <div class="site-header__basket">
+            <img class="icon bookmark-icon" src="img/" alt="bookmark">
+            <span>Закладки:</span>
+            <!-- Как сделать вывод количества товаров в корзине тоже непонятно. -->
+        </div>
+        <span class="site-header__place-order"><a href="#">Оформить заказ</a></span>
+        <!-- Куда должна вести ссылка при нажатии кнопки "Оформить заказ" неясно. -->
+        </section>
+        <section class="site-header__navigation">
+        <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="site-header__contacts">
+            <span class="site-header__phone-number">
+            <img src="img/" alt="phone-icon">
+            +7(812) 555-05-55
+            </span>
+            <p class="site-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <nav class="site-header__user-navigation">
+            <span class="site-header__user-navigation-item">
+            <a href="#"><img src="img/" alt="entrance-icon">Равшан Джамшутович</a>
+            </span>
+            <!-- Как будет менятся кнопка "Войти" на "Равшан Джамшутович" пока непонятно. -->
+            <!--  
+            <span class="site-header__user-navigation-item">
+                <a href="#">Регистрация</a>
+            </span> -->
+            <!-- Кнопка "Регистрация" должна исчезнуть когда пользователь авторизуется как это произойдет непонятно. -->
+            <p>
+                <a href="">Мои заказы</a> <!-- Эта ссылка ведет в корзину???  -->
+                <a href="">Личный кабинет</a> <!-- Страницы "личный кабинет в меню нет, куда ведет эта ссылка непонятно" -->
+            </p>
+        </nav>
+        <nav class="site-header__site-navigation">
+            <ul class="site-header__site-navigation-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="company.html">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="special-offers.html">Спецпредложения</a></li>
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        </section>
+    </header>
+    <main class="catalog-main">
+        <ul class="catalog-main__breadcrumbs">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Инструмент</a></li> <!-- Куда ведет ссылка??? -->
+            <li>Перфораторы</li>     
+        </ul>
+        <h1>Перфораторы</h1>
+            <form class="catalog-main__filters">
+                <h2 >Фильтр</h2>
+                <!-- Здесь будет фильтр по цене -->
+                <div class="catalog-main__producer-filter">
+                    <p>Производители</p>
+                    <ul class="catalog-main__producer-filter-list" >
+                        <li>
+                            <input type="checkbox" name="Bosch" id="Bosch-checkbox">
+                            <label for="Bosch-checkbox">Bosch</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Interskol" id="Interskol-checkbox">
+                            <label for="Interskol-checkbox">Интерскол</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Makita" id="Makita-checkbox">
+                            <label for="Makita-checkbox">Makita</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Dewalt" id="Dewalt-checkbox">
+                            <label for="Dewalt-checkbox">Makita</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Hitachi" id="Hitachi-checkbox">
+                            <label for="Makita-checkbox">Hitachi</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog-main__power-supply-filter">
+                    <p>Питание</p>
+                    <ul class="catalog-main__power-supply-filter-list">
+                        <li>
+                            <input type="radio" name="battery" id="battery-radio" value="battery">
+                            <label for="battery-radio">Аккумуляторные</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="network" id="network-radio" value="network">
+                            <label for="care-products-radio">Сетевые</label>
+                        </li>
+                    </ul>
+                </div>
+                <input class="catalog-main__filters--submit" type="submit"  value="Показать">
+            </form>
+    <!-- Здесь будет сортировка -->
+            <article class="catalog-main__products">
+                <h2 class="visually-hidden">Список товаров</h2>
+                <ul class="catalog-main__products-list">
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 3000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">15500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="add-to-bookmarks-button" type="button" value="В закладки"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 6000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">25500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 2000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 2000</span>
+                        <span class="catalog-main__product-price">12500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 3000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">15500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="add-to-bookmarks-button" type="button" value="В закладки"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 6000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">25500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 2000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 2000</span>
+                        <span class="catalog-main__product-price">12500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 3000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">15500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="add-to-bookmarks-button" type="button" value="В закладки"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 6000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 3000</span>
+                        <span class="catalog-main__product-price">25500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/" alt="BOSCH BFG 2000">
+                        <span class="catalog-main__product-name">Перфоратор BOSCH BFG 2000</span>
+                        <span class="catalog-main__product-price">12500 Р.</span> <!-- предыдущую цены товара хочу указать с помощью :before  -->
+                        <div class="add-to-bookmarks-and-order">
+                                <span class="catalog-main__order">
+                                    <img src="img/" alt="cart-icon"> <!-- как вариант иконку картинки добавить фоном -->
+                                    Купить <!-- При клике на кнопку она должна добавлять товар в корзину или добавлять в корзину и переходить в нее??? -->
+                                </span>
+                                <input class="order-button" type="button" value="Купить"> <!-- Вопрос аналогичный кнопке выше -->
+                        </div>
+                    </li>
+                </ul>
+            </article>
+    </main>
+        <footer class="site-footer">
+        <section class="site-footer__navigation">
+            <nav class="site-footer__navigation-top">
+            <span class="site-footer__site-logo"><a href="index.html">Техномарт</a></span>
+            <ul class="site-footer__navigation-top-list">
+                <li><a href="company.html">Компания</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            </nav>
+            <nav class="site-footer__navigation-bottom">
+            <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</span>
+            <ul site-footer__navigation-bottom-list>
+                <li><a href="#">Материалы</a></li>
+                <li><a href="#">Техника</a></li>
+                <li><a href="#">Инструмент</a></li>
+                <!-- Куда должны вести ссылки сверху пока неясно -->
+                <li><a href="special-offers.html">Спецпредложения</a></li>
+            </ul>
+            </nav>
+        </section>
+        <section class="site-footer__social">
+            <span>© 2010–2019 Компания «Техномарт» Все права защищены</span>
+            <ul class="site-footer__social-icons">
+            <li><a href=""><img src="img/" alt="social-vk"></a></li>
+            <li><a href=""><img src="img/" alt="social-fb"></a></li>
+            <li><a href=""><img src="img/" alt="social-inst"></a></li>
+            </ul>
+            <span>Обратная связь:<br>
+            <a href=""></a> <!-- Непонятно что должно произойти, вероятно должен открыться клиент почты -->
+            </span>
+            <span>Разработано<br>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a> 
+            </span>
+        </section>
+        </footer>
+    </body>
+</html>
