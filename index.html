@@ -8,45 +8,42 @@
     <header class="site-header">
       <section class="site-header__search-and-order">
         <span class="site-header__site-logo"><a href="index.html">Техномарт</a></span>
-        <div class="site-header__search-field">
-          <img class="icon search-icon" src="img/icons/icon-search.png" alt="search-icon">
-          <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
-        </div>
-        <div class="site-header__bookmarks">
-            <img class="icon bookmark-icon" src="img/icons/icon-bookmark.png" alt="bookmark">
-            <span>Закладки:</span>
-            <!-- Как сделать вывод количества закладок пока непонятно. -->
-        </div>
-        <div class="site-header__basket">
+        <ul>
+          <li class="site-header__search-field">
+            <img class="icon search-icon" src="img/icons/icon-search.png" alt="search-icon">
+            <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
+          </li>
+          <li class="site-header__bookmarks">
+              <img class="icon bookmark-icon" src="img/icons/icon-bookmark.png" alt="bookmark">
+              Закладки:0
+          </li>
+          <li class="site-header__basket">
             <img class="icon cart-icon" src="img/icons/cart-icon.png" alt="bookmark">
-            <span>Корзина:</span>
-            <!-- Как сделать вывод количества товаров в корзине тоже непонятно. -->
-        </div>
-        <span class="site-header__place-order"><a href="#">Оформить заказ</a></span>
-        <!-- Куда должна вести ссылка при нажатии кнопки "Оформить заказ" неясно. -->
+            Корзина:10
+          </li>
+          <li class="site-header__place-order">
+            <a href="#">Оформить заказ</a>
+          </li>
+        </ul>
       </section>
       <section class="site-header__navigation">
-        <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <h1 class="visually-hidden">Техномарт. Главная страница</h1>
+        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="site-header__contacts">
-          <span class="site-header__phone-number">
-            <img src="img/icons/icon-phone.png" alt="phone-icon">
-            +7(812) 555-05-55
-          </span>
-          <p class="site-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a href="tel:+78125550555">+7(812) 555-05-55</a>
+          <address class="site-header__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <nav class="site-header__user-navigation">
-          <span class="site-header__user-navigation-item">
+        <ul class="site-header__user-navigation">
+          <li class="site-header__user-navigation-item">
             <a href="#"><img src="img/icons/icon-login.png" alt="entrance-icon">Войти</a>
-          </span>
-          <!-- Куда мы попадаем нажимая кнопку "Войти" непонятно. -->
-          <span class="site-header__user-navigation-item">
-              <a href="#">Регистрация</a>
-          </span>
-          <!-- Куда мы попадаем нажимая кнопку "Регистрация" непонятно. -->
-        </nav>
+          </li>
+          <li class="site-header__user-navigation-item">
+            <a href="#">Регистрация</a>
+          </li>
+        </ul>
         <nav class="site-header__site-navigation">
           <ul class="site-header__site-navigation-list">
-            <li><a href="index.html">Главная</a></li>
+            <li><a>Главная</a></li>
             <li><a href="company.html">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="news.html">Новости</a></li>
@@ -69,19 +66,23 @@
             <li>Автотрейдинг</li>
             <li>ЖелдорЭкспедиция</li>
           </ul>
-          <span><a href="company.html">Подробнее о компании</a></span>
+          <button class="btn"><a href="company.html">Подробнее о компании</a></button>
         </div>
         <div class="index-main__contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <!-- Здесь должна быть карта с координатами магазина и кнопка "Напишите нам" -->
+          <a href="#"><img src="img/map.png" alt="map-image"></a>
+          <button class="btn"><a href="#">Заблудились? Напишите нам</a></button>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <section class="site-footer__navigation">
-        <nav class="site-footer__navigation-top">
-          <span class="site-footer__site-logo"><a href="index.html">Техномарт</a></span>
+      <section class="site-footer__logo-and-navigation">
+        <div class="site-footer__logo-and-adress">
+          <a href="index.html">Техномарт</a>
+          <address class="site_footer__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</address>
+        </div>
+        <nav class="site-footer__navigation">
           <ul class="site-footer__navigation-top-list">
             <li><a href="company.html">Компания</a></li>
             <li><a href="news.html">Новости</a></li>
@@ -89,14 +90,10 @@
             <li><a href="delivery.html">Доставка</a></li>
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
-        </nav>
-        <nav class="site-footer__navigation-bottom">
-          <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</span>
-          <ul site-footer__navigation-bottom-list>
+          <ul class="site-footer__navigation-bottom-list">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
-            <!-- Куда должны вести ссылки сверху пока неясно -->
             <li><a href="special-offers.html">Спецпредложения</a></li>
           </ul>
         </nav>
@@ -108,12 +105,16 @@
           <li><a href=""><img src="img/icons/fb-icon.png" alt="social-fb"></a></li>
           <li><a href=""><img src="img/icons/insta-icon.png" alt="social-inst"></a></li>
         </ul>
-        <span>Обратная связь:<br>
-          <a href=""></a> <!-- Непонятно что должно произойти, вероятно должен открыться клиент почты -->
-        </span>
-        <span>Разработано<br>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a> 
-        </span>
+        <ul class="site-footer__feedback">
+          <li>
+              <p>Обратная связь:</p>
+              <a href="mailto:mail@htmlacademy.ru"></a>
+          </li>
+          <li>
+            <p>Разработано</p>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </li>
+        </ul>
       </section>
     </footer>
   </body>
