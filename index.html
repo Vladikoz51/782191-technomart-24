@@ -56,25 +56,157 @@
     </header>
     <main class="index-main">
       <!-- Контент будет добавлен позже  -->
-      <section class="index-main__abous-us-and-contacts">
-        <div class="index-main__abous-us">
-          <h2>Компания &laquo;Техномарт&raquo;</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
-          <ul class="index-main__partners">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелдорЭкспедиция</li>
-          </ul>
-          <a href="company.html">Подробнее о компании</a>
-        </div>
-        <div class="index-main__contacts">
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a href="#"><img src="img/map.png" alt="map-image"></a>
-          <a href="#">Заблудились? Напишите нам</a>
+      <section class="index-main__promo">
+        <h2 class="visually-hidden">Техномарт. Промо блок.</h2>
+        <ul class="index-main__promo-list">
+          <li class="index-main__promo-list--materials">
+            Материалы
+            <a href=#>На любой вкус</a>
+          </li>
+          <li class="index-main__promo-list--tools">
+            Инструмент
+            <a href="#"> На все случаи</a>
+          </li>
+          <li class="index-main__promo-list--technics">
+            Техника
+            <a href="#">Для стройки</a>
+          </li>
+          <li class="index-main__promo-list--discount">
+            Скидки 50%
+            <a href="#"> На 350 товаров</a>
+          </li>
+          <li class="index-main__promo-list--delivery">
+            Доставка
+            <a href="#">Бесплатно</a>
+          </li>
+        </ul>
+        <div class="index-main__slider">
+          <p class="index-main__slider-tagline">
+            <b>Дрели</b> <br> Cоседям на радость! 
+          </p>
+          <!-- Вопрос по слайдеру, слайды должны быть фоном или вставлять их картинками в html???  -->
+          <a class="index-main__btn" href="#">Открыть каталог</a>
         </div>
       </section>
+      <section class="index-main__popular-products">
+        <h2 class="index-main__popular-products--headline">
+          Популярные товары
+          <a class="index-main__btn" href="#">Все популярные товары</a>
+        </h2>
+        <ul class="index-main__popular-products-list">
+          <li class="product-card">
+              <img src="img/" alt="bosch-bfg-3000">
+              <h3 class="product-card__name">Перфоратор BOSCH BFG 9000</h3>
+              <span class="product-card__previous-price">25500 Р.</span>
+              <span class="product-card__price">32500 Р.</span>
+              <div class="product-card__add-to-bookmarks-and-order">
+                <button class="product-card____order" value="Купить"></button> 
+                <button class="product-card__add-to-bookmarks" value="В закладки"> 
+              </div>
+          </li>
+          <li class="product-card">
+              <img src="img/" alt="bosch-bfg-3000">
+              <h3 class="product-card__name">Перфоратор BOSCH BFG 3000</h3>
+              <span class="product-card__previous-price">22500 Р.</span>
+              <span class="product-card__price">15500 Р.</span>
+              <div class="product-card__add-to-bookmarks-and-order">
+                <button class="product-card____order" value="Купить"></button> 
+                <button class="product-card__add-to-bookmarks" value="В закладки"> 
+              </div>
+          </li>
+          <li class="product-card">
+              <img src="img/" alt="bosch-bfg-6000">
+              <h3 class="product-card__name">Перфоратор BOSCH BFG 6000</span>
+              <span class="product-card__previous-price">30500 Р.</span>
+              <span class="product-card__price">25500 Р.</span>
+              <div class="add-to-bookmarks-and-order">
+                <button class="product-card____order" value="Купить"></button> 
+                <button class="product-card__add-to-bookmarks" value="В закладки"></button>
+              </div>
+          </li>
+          <li class="product-card">
+              <img src="img/" alt="bosch-bfg-2000">
+              <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</span>
+              <span class="product-card__previous-price"></span> 
+              <span class="product-card__price">12500 Р.</span>
+              <div class="add-to-bookmarks-and-order">
+                <button class="product-card____order" value="Купить"></button> 
+                <button class="product-card__add-to-bookmarks" value="В закладки"></button>
+              </div>
+          </li>
+        </ul>
+        </section>
+        <section class="index-main__popular-producers">
+          <h2 class="index-main__popular-producers--headline">
+            Популярные производители
+            <a class="index-main__btn" href="#">Все производители</a>
+          </h2>
+          <ul class="index-main__popular-producers-list">
+            <li><a href="#"><img src="img/" alt="bosch"></a></li>
+            <li><a href="#"><img src="img/" alt="makita"></a></li>
+            <li><a href="#"><img src="img/" alt="dewalt"></a></li>
+            <li><a href="#"><img src="img/" alt="interskol"></a></li>
+            <li><a href="#"><img src="img/" alt="hitachi"></a></li>
+            <li><a href="#"><img src="img/" alt="lg"></a></li>
+            <li><a href="#"><img src="img/" alt="aeg"></a></li>
+            <li><a href="#"><img src="img/" alt="metabo"></a></li>
+          </ul>
+        </section>
+        <section class="index-main__services">
+          <h2 class="index-main__services--headline">Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <ul class="index-main__services-list">
+            <li class="index-main__services-delivery">
+              <button >Доставка</button>
+            </li>
+            <li class="index-main__services-warranty">
+              <button class=>Гарантия</button>
+            </li>
+            <li class="index-main__services-credit">
+              <button>Кредит</button>
+            </li>
+          </ul>
+          <div class="index-main__services-delivery-annotation">
+            <h3 class=>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо 
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем, 
+                поднимая его на ваш этаж!</p>
+                <!-- Картинку планирую вставить псевдоклассом :after -->
+          </div>
+        </section>
+        <section class="index-main__abous-us-and-contacts">
+          <div class="index-main__abous-us">
+            <h2>Компания &laquo;Техномарт&raquo;</h2>
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
+            <ul class="index-main__partners">
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелдорЭкспедиция</li>
+            </ul>
+            <a href="company.html">Подробнее о компании</a>
+          </div>
+          <div class="index-main__contacts">
+            <h2>Контакты</h2>
+            <p>Вы можете забрать товар сами, заехав в наш офис:</p>
+            <a href="#"><img src="img/map.png" alt="map-image"></a>
+            <a href="#">Заблудились? Напишите нам</a>
+          </div>
+        </section >
+        <section class="index-main__map-popup">
+          <button ><img src="" alt="close-icon"><!-- здесь будет иконка закрытия, а карта будет фоном --></button>
+        </section>
+        <section class="index-main__write-us-popup">
+          <form  action="???">
+            <input type="text" name="letter-topic">
+            <label for="write-us-popup__mail-field">Ваш e-mail:</label>
+            <input id="write-us-popup__mail-field" type="email" name="email" placeholder="email@example.com">
+            <textarea name="letter-content" id="write-us-popup__letter-content" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            <input type="submit" value="Отправить">
+          </form>
+          <button><img src="" alt="close-icon"><!-- здесь будет иконка закрытия--></button>
+        </section>
     </main>
     <footer class="site-footer">
       <section class="site-footer__logo-and-navigation">
