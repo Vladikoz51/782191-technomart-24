@@ -79,7 +79,7 @@
                     <ul class="catalog-main__producer-filter-list" >
                         <li>
                             <input type="checkbox" name="bosch" id="bosch-checkbox">
-                            <label for="Bosch-checkbox">Bosch</label>
+                            <label for="bosch-checkbox">Bosch</label>
                         </li>
                         <li>
                             <input type="checkbox" name="interskol" id="interskol-checkbox">
@@ -108,7 +108,7 @@
                         </li>
                         <li>
                             <input type="radio" name="network" id="network-radio" value="network">
-                            <label for="care-products-radio">Сетевые</label>
+                            <label for="network-radio">Сетевые</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -130,8 +130,8 @@
                      <a href="#">По функционалу</a>    
                     </li>
                     <li class="catalog-main__sorting-item">
-                        <button class="catalog-main__sorting-button--ascending"><img src="img/icons/icon-up-dir.svg" alt="ascending-button"></button> 
-                        <button class="catalog-main__sorting-button--descending"><img src="img/icons/icon-down-dir.svg" alt="descending-button"></button>
+                        <button class="catalog-main__sorting-button--ascending" aria-label="по возрастанию"><img src="img/icons/icon-up-dir.svg" alt="ascending-button"></button> 
+                        <button class="catalog-main__sorting-button--descending" aria-label="по убыванию"><img src="img/icons/icon-down-dir.svg" alt="descending-button"></button>
                     </li>
                 </ul>
                 <ul class="catalog-main__products-list">
@@ -237,9 +237,9 @@
                     <p>Товар добавлен в корзину</p>
                     <div class="catalog-main__card-popup-buttons">
                         <a href="#">Оформить заказ</a>
-                        <button class="catalog-main__card-popup--continue-button" >Продолжить покупки</button>
+                        <button class="catalog-main__card-popup--continue-button" aria-label="Продолжить покупки">Продолжить покупки</button>
                     </div>
-                    <button><img src="img/icons/icon-close.svg" alt="close-icon">Закрыть</button>
+                    <button aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon"></button>
                 </div>
             </section>
             <section class="catalog-main__product-info">
