@@ -1,46 +1,56 @@
 @font-face { 
     font-family: 'Cuprum'; 
-    src: url('../fonts/cuprum.woff2') format('woff2'),   
-         url('../fonts/cuprum.woff') format('woff'); 
+    src:
+        local('Cuprum'),
+        url('../fonts/cuprum.woff2') format('woff2'),   
+        url('../fonts/cuprum.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal;
 }
 
 @font-face { 
     font-family: 'CuprumBold'; 
-    src: url('../fonts/cuprumbold.woff2') format('woff2'),   
-         url('../fonts/cuprumbold.woff') format('woff'); 
+    src: 
+        local('CuprumBold'),
+        url('../fonts/cuprumbold.woff2') format('woff2'),   
+        url('../fonts/cuprumbold.woff') format('woff'); 
     font-weight: normal; 
-    font-style: normal;
+    font-style: bold;
 }
 
 @font-face { 
     font-family: 'CuprumItalic'; 
-    src: url('../fonts/cuprumitalic.woff2') format('woff2'),   
-         url('../fonts/cuprumitalic.woff') format('woff'); 
+    src:
+        local('CuprumItalic'),
+        url('../fonts/cuprumitalic.woff2') format('woff2'),   
+        url('../fonts/cuprumitalic.woff') format('woff'); 
     font-weight: normal; 
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face { 
     font-family: 'PTSans'; 
-    src: url('../fonts/ptsans.woff2') format('woff2'),   
-         url('../fonts/ptsans.woff') format('woff'); 
+    src:
+        local('PTSans'),
+        url('../fonts/ptsans.woff2') format('woff2'),   
+        url('../fonts/ptsans.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal;
 }
 
 @font-face { 
     font-family: 'PTSansBold'; 
-    src: url('../fonts/ptsansbold.woff2') format('woff2'),   
-         url('../fonts/ptsansbold.woff') format('woff'); 
+    src:
+        local('PTSansBold'),
+        url('../fonts/ptsansbold.woff2') format('woff2'),   
+        url('../fonts/ptsansbold.woff') format('woff'); 
     font-weight: normal; 
-    font-style: normal;
+    font-style: bold;
 }
 
 body {
-    width: 1200px;
-    margin: 0 auto;
+    min-width: 1200px;
+    margin: 0;
     padding: 0;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
@@ -63,13 +73,26 @@ p {
     padding: 0;
 }
 
+.fill-container {
+    width: inherit;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .visually-hidden {
     display: none;
 }
 
+.fill-container__search-and-order {
+    background-color: #293449;
+}
+
 .site-header__search-and-order {
     height: 42px;
-    padding: 0 130px;
     background-color: #293449;
     display: flex;
 }
@@ -116,7 +139,7 @@ p {
     color: #ffffff;
     background-color: #293449;
 }
-/* Непонятно как задать отступы между текстом не обернутым в тег и иконкой. */
+
 .site-header__bookmarks,
 .site-header__basket { 
     box-sizing: border-box;  
@@ -148,10 +171,14 @@ p {
     color: #ffffff;
 }
 
+.fill-container__header-navigation {
+    background-color: #f2f6f8;
+}
+
 .site-header__contacts-and-user-navigation {
     display: flex;
-    padding: 0 130px;
     background-color: #f2f6f8;
+    justify-content: space-between;
 }
 
 .site-header__contacts-and-user-navigation p {
@@ -199,6 +226,7 @@ p {
     color: rgb(50, 66, 92);
     line-height: 35px;
     text-align: center;
+    font-style: normal;
 }
 
 .site-header__user-navigation {
@@ -208,14 +236,22 @@ p {
     margin: 46px 0 0 74px;
 }
 
-.site-header__user-navigation-item {
-    background: #ffffff;
+.site-header__user-navigation--authorised {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 46px;
 }
 
 .site-header__user-navigation-item {
+    background: #ffffff;
     text-align: center;
     padding: 14px 0;
+}
 
+.site-header__user-navigation-item--authorised {
+    background: #ffffff;
+    padding: 14px 0;
 }
 
 .site-header__user-navigation-item:nth-child(1) {
@@ -227,7 +263,8 @@ p {
     width: 150px;
 }
 
-.site-header__user-navigation-item a {
+.site-header__user-navigation-item a,
+.site-header__user-navigation-item--authorised a {
     font-size: 21px;
     font-family: 'Cuprum', 'Arial', sans-serif;
     color: rgb(0, 0, 0);
@@ -235,14 +272,47 @@ p {
     text-align: center;
 }
 
-.site-header__user-navigation-item:nth-child(1) img {
-    position: relative;
-    right: 14px;
-    top: 2px;
+.site-header__user-navigation-item--authorised a {
+    display: inline-block;
+    height: inherit;
+}
+
+.site-header__user-navigation-item--authorised a:first-child {
+    margin-left: 13px;
+}
+
+.site-header__user-navigation-item--authorised span {
+    margin-left: 14px;
+}
+
+.site-header__user-navigation-item--authorised a:last-child {
+    margin-left: 39px;
+    margin-right: 10px;
+}
+.site-header__user-order-and-cabinet-links {
+    margin-top: 12px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+
+}
+
+.site-header__user-order-and-cabinet-links a {
+    font-size: 16px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    color: #32425c;
+    line-height: 18px;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.site-header__user-order-and-cabinet-links svg {
+    vertical-align: middle;
+    margin: 0 13px 0 15px;
 }
 
 .site-header__site-navigation {
-    padding: 0 130px 60px 130px;
+    padding-bottom: 60px;
     background-color: #f2f6f8;
 
 }
@@ -476,6 +546,7 @@ justify-content: space-between;
     color: rgb(50, 66, 92);
     text-transform: uppercase;
     line-height: 1;
+    font-weight: 400;
 }
 
 .index-main__btn--popular-products {
@@ -557,6 +628,7 @@ justify-content: space-between;
     color: rgb(50, 66, 92);
     text-transform: uppercase;
     line-height: 1;
+    font-weight: 400;
 }
 
 .index-main__btn--popular-producers {
@@ -581,11 +653,15 @@ justify-content: space-between;
     margin-bottom: 20px;
 }
 
+.fill-container__index--services {
+    background: #f4f8f9;
+}
+
 .index-main__services {
-    padding: 68px 130px 99px;
+    padding: 68px 10px 99px;
     margin-top: 65px;
     background: #f4f7f9 url('../img/service-1.png') no-repeat;
-    background-position: 601px 261px;
+    background-position: 481px 261px;
     position: relative;
 }
 
@@ -596,6 +672,7 @@ justify-content: space-between;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     line-height: 1;
+    font-weight: 400;
 }
 
 .index-main__services p {
@@ -638,7 +715,7 @@ justify-content: space-between;
 .index-main__services-delivery-annotation {
     position: absolute;
     top: 240px;
-    left: 450px;
+    left: 330px;
 }
 
 .index-main__services-delivery-annotation h3 {
@@ -648,6 +725,7 @@ justify-content: space-between;
     font-family: 'Cuprum', 'Arial', sans-serif;
     color: #32425c;
     line-height: 1;
+    font-weight: 400;
 }
 
 .index-main__services-delivery-annotation p {
@@ -656,7 +734,7 @@ justify-content: space-between;
 }
 
 .index-main__abous-us-and-contacts {
-    padding: 82px 130px 86px 130px;
+    padding: 82px 10px 86px ;
     
     display: flex;
     justify-content: space-between;
@@ -671,6 +749,7 @@ justify-content: space-between;
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 .index-main__abous-us p,
@@ -735,8 +814,12 @@ margin-left: 35px;
     display: none;
 }
 
+.fill-container__footer--logo-and-navigation {
+    background: #32425c;
+
+}
+
 .site-footer__logo-and-navigation {
-    padding: 0 130px;
     background: #32425c;
     display: flex;
     justify-content: space-between;
@@ -803,8 +886,12 @@ margin-left: 35px;
     color: #ffd180;
 }
 
+.fill-container__footer--social {
+    background: #293449;
+}
+
 .site-footer__social {
-    padding: 25px 130px 37px 130px;
+    padding: 25px 0 37px 0;
     background: #293449;
     display: flex;
     font-size: 16px;
@@ -848,6 +935,331 @@ margin-left: 35px;
     color: #ffd180;
     line-height: 26px; 
 }
+
+/* C этого места идет стилизация catalog.html */
+
+.catalog-main__breadcrumbs {
+    display: flex;
+    
+} 
+
+.catalog-main__breadcrumbs {
+    margin: 21px auto;
+    position: relative;
+}
+
+.catalog-main__breadcrumbs,
+.catalog-main__breadcrumbs a {
+    font-size: 13px;
+    font-family: 'PTSans', 'Arial', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+
+.catalog-main__breadcrumbs li {
+    margin-right: 40px; 
+}
+
+.catalog-main__breadcrumbs::before {
+    content: url('../img/icons/icon-home.svg');
+    width: 14px;
+    height: 12px;
+    margin-right: 15px;
+}
+
+.catalog-main__breadcrumbs li:before {
+    content: url('../img/icons/icon-right-small.svg');
+    width: 8px;
+    height: 12px;
+    margin-right: 18px;
+}
+
+.catalog-main h1 {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: #f2f6f8;
+    font-size: 30px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    color: #32425c;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.catalog-main__filters-and-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-main__filters {
+    width: 220px;
+    font-family: 'PTSans', 'Arial', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-main__filters legend {
+    font-family: 'PTSansBold', 'Arial', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    padding: 12px 0;
+
+}
+.catalog-main__filters h2 {
+    display: block;
+    margin: 0;
+    padding: 6px 0;
+    background: #f2f6f8;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.price-range-field-container {
+    padding: 40px 20px;
+    background: #f2f6f8;
+    
+}
+
+#price-range-field {
+    width: 180px;
+    
+}
+
+.catalog-main__min-and-max-price-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    margin-bottom: 25px;
+}
+
+.min-price-field-container,
+.max-price-field-container {
+    width: 95px;
+    background: #f2f6f8;
+    font-family: 'PTSans', 'Arial', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.catalog-main__min-and-max-price-fields input {
+    width: inherit;
+    background: #f2f6f8;
+    border: none;
+    color: #000000;
+}
+
+.catalog-main__min-and-max-price-fields input:hover,
+.catalog-main__min-and-max-price-fields input:focus {
+    outline: 0;
+}
+
+.catalog-main__price-filter,
+.catalog-main__producer-filter {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.catalog-main__producer-filter-list li {
+    padding-left: 35px;
+    position: relative;
+    height: 23px;
+    margin-bottom: 17px;
+    line-height: 23px;
+}
+
+.catalog-main__producer-filter-list li {
+    margin-bottom: 17px;
+    line-height: 23px;
+}
+
+.catalog-main__producer-filter-list li:last-child {
+    margin-bottom: 21px;
+}
+
+.catalog-main__producer-filter-list input {
+    display: none;
+}
+
+.catalog-main__producer-filter-list label::before {
+    content: url('../img/icons/checkbox-off.svg');
+    position: absolute;
+    left: 0px;
+}
+
+.catalog-main__producer-filter-list input:checked + label::before {
+    content: url('../img/icons/checkbox-on.svg');
+    position: absolute;
+    left: 0px;
+}
+
+.catalog-main__power-supply-filter-list li {
+    padding-left: 35px;
+    position: relative;
+    height: 25px;
+    margin-bottom: 16px;
+    line-height: 25px;
+}
+
+.catalog-main__power-supply-filter-list input {
+    display: none;
+}
+
+.catalog-main__power-supply-filter-list label::before {
+    content: url('../img/icons/radio-off.svg');
+    position: absolute;
+    left: 0px;
+}
+
+.catalog-main__power-supply-filter-list input:checked + label::before {
+    content: url('../img/icons/radio-on.svg');
+    position: absolute;
+    left: 0px;
+}
+
+.catalog-main__filters--submit {
+    margin: 0;
+    margin-top: 59px;
+    padding: 15px 39px;
+    border: 1px solid #e5e5e5;
+    background: none;
+}
+
+.catalog-main__products {
+    display: flex;
+    flex-direction: column;
+    
+}
+.catalog-main__sorting-list {
+    display: flex;
+    background: #f2f6f8;
+    /* padding-right: 11px; */
+
+}
+
+.catalog-main__sorting-item ,
+.catalog-main__sorting-item a {
+    font-family: 'PTSans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    
+}
+
+.catalog-main__sorting-item button {
+    background: none;
+    border: none;
+    padding: 6px;
+}
+
+.catalog-main__sorting-item button:first-child {
+    margin-right: 9px;
+}
+
+.catalog-main__sorting-item:nth-child(1) {
+    padding: 0 140px 0 19px; 
+}
+
+.catalog-main__sorting-item:nth-child(2) {
+    padding-right: 72px; 
+}
+
+.catalog-main__sorting-item:nth-child(3) {
+    padding-right: 65px; 
+}
+
+.catalog-main__sorting-item:nth-child(4) {
+    padding-right: 34px; 
+}
+
+.catalog-main__products-list {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.product-card--catalog {
+    margin-top: 20px;
+}
+
+.product-card--catalog:not(:nth-child(3n)) {
+    margin-right: 20px;
+} 
+
+.catalog-main__paginator {
+    margin-top: 52px;
+    margin-bottom: 60px;
+}
+
+.catalog-main__paginator-item {
+    display: inline-block;
+    font-family: 'PTSans', 'Arial', sans-serif;
+    font-size: 13px;
+    color: #000000;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    margin-right: 10px;
+}
+
+.catalog-main__paginator-item--next {
+    width: 140px;
+    margin-right: 0;
+}
+
+.catalog-main__paginator-item:hover {
+    background: #ee3643;
+    color: #fac9cd;
+}
+
+.catalog-main__card-popup {
+    display: none;
+}
+
+.fill-container__catalog-main--product-info {
+    background: #f2f6f8;
+}
+.catalog-main__product-info {
+    padding: 59px;
+}
+
+
+.catalog-main__product-info h2 {
+    font-size: 30px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.catalog-main__product-info p {
+    font-size: 13px;
+    font-family: 'PTSans', 'Arial', sans-serif;
+    color: #000000;
+    line-height: 24px;
+    text-align: justify;
+    margin-top: 22px;
+}
+
+
+
+
 
 
 

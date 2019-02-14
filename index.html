@@ -8,28 +8,31 @@
   </head>
   <body>
     <header class="site-header">
-      <section class="site-header__search-and-order">
-        <p class="site-header__site-logo"><a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a></p>
-        <ul class="site-header__search-and-order-list">
-          <li class="site-header__search-field">
-            <img class="icon search-icon" src="img/icons/icon-search.svg" width="17px" height="17px" alt="search-icon">
-            <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
-          </li>
-          <li class="site-header__bookmarks">
-              <img class="icon bookmark-icon" src="img/icons/icon-bookmark.svg" alt="bookmark-icon">
-              <span>Закладки: 0</span>
-          </li>
-          <li class="site-header__basket">
-            <img class="icon cart-icon" src="img/icons/cart-icon.svg" alt="cart-icon">
-            <span>Корзина: 10</span>
-          </li>
-          <li class="site-header__place-order">
-            <a href="#">Оформить заказ</a>
-          </li>
-        </ul>
-      </section>
-      <section class="site-header__navigation">
-        <div class="site-header">
+      <div class="fill-container fill-container__search-and-order">
+        <section class="site-header__search-and-order container">
+            <p class="site-header__site-logo"><a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a></p>
+            <ul class="site-header__search-and-order-list">
+              <li class="site-header__search-field">
+                <img class="icon search-icon" src="img/icons/icon-search.svg" width="17px" height="17px" alt="search-icon">
+                <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
+              </li>
+              <li class="site-header__bookmarks">
+                  <img class="icon bookmark-icon" src="img/icons/icon-bookmark.svg" alt="bookmark-icon">
+                  <span>Закладки: 0</span>
+              </li>
+              <li class="site-header__basket">
+                <img class="icon cart-icon" src="img/icons/cart-icon.svg" alt="cart-icon">
+                <span>Корзина: 10</span>
+              </li>
+              <li class="site-header__place-order">
+                <a href="#">Оформить заказ</a>
+              </li>
+            </ul>
+          </section>
+      </div>
+    <div class="fill-container fill-container__header-navigation">
+      <section class="site-header__navigation container">
+          <div class="site-header__contacts-and-user-navigation--container">
           <h1 class="visually-hidden">Техномарт. Главная страница</h1>
           <div class="site-header__contacts-and-user-navigation">
             <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -59,9 +62,10 @@
           </ul>
         </nav>
       </section>
+    </div>
     </header>
     <main class="index-main">
-      <section class="index-main__promo">
+      <section class="index-main__promo container">  
         <h2 class="visually-hidden">Техномарт. Промо блок.</h2>
         <ul class="index-main__promo-list-top">
           <li class="index-main__promo-item index-main__promo-item--materials">
@@ -97,7 +101,7 @@
             </ul>
         </div>
       </section>
-      <section class="index-main__popular-products">
+      <section class="index-main__popular-products container">
         <div class="index-main__popular-products--headline">
           <h2>Популярные товары</h2>
           <a class="index-main__btn index-main__btn--popular-products" href="#">Все популярные товары</a>
@@ -145,23 +149,24 @@
           </li>
         </ul>
         </section>
-        <section class="index-main__popular-producers">
+        <section class="index-main__popular-producers container">
           <div class="index-main__popular-producers--headline">
             <h2>Популярные производители</h2>
             <a class="index-main__btn index-main__btn--popular-producers" href="#">Все производители</a> 
           </div>
           <ul class="index-main__popular-producers-list">
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/bosch.png" alt="bosch"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/makita.png" alt="makita"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/dewalt.png" alt="dewalt"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/interskol.png" alt="interskol"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/hitachi.png" alt="hitachi"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/lg.png" alt="lg"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/aeg.png" alt="aeg"></a></li>
-            <li class="index-main__popular-producers-item"><a href="#"><img src="img/metabo.png" alt="metabo"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/bosch-logo.png" alt="bosch"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/makita-logo.png" alt="makita"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/dewalt-logo.png" alt="dewalt"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/interskol-logo.png" alt="interskol"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/hitachi-logo.png" alt="hitachi"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/lg-logo.png" alt="lg"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/aeg-logo.png" alt="aeg"></a></li>
+            <li class="index-main__popular-producers-item"><a href="#"><img src="img/metabo-logo.png" alt="metabo"></a></li>
           </ul>
         </section>
-        <section class="index-main__services">
+      <div class="fill-container fill-container__index--services">
+        <section class="index-main__services container">
           <h2 class="index-main__services--headline">Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! 
 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -185,7 +190,8 @@
 поднимая его на ваш этаж!</p> <!-- Картинку планирую вставить фоном -->
           </div>
         </section>
-        <section class="index-main__abous-us-and-contacts">
+      </div>
+        <section class="index-main__abous-us-and-contacts container">
           <div class="index-main__abous-us">
             <h2>Компания &laquo;Техномарт&raquo;</h2>
 <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и 
@@ -233,47 +239,52 @@
         </section>
     </main>
     <footer class="site-footer">
-      <section class="site-footer__logo-and-navigation">
-        <div class="site-footer__logo-and-adress">
-          <a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a>
-<address class="site_footer__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
+        <div class="fill-container fill-container__footer--logo-and-navigation">
+          <section class="site-footer__logo-and-navigation container">
+            <div class="site-footer__logo-and-adress">
+              <a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a>
+<address class="site_footer__adress">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
 +7 (812) 555-05-55</address>
+            </div>
+              <nav class="site-footer__navigation">
+                <ul class="site-footer__navigation-top-list">
+                  <li class="site-footer__navigation-item"><a href="company.html">Компания</a></li>
+                  <li class="site-footer__navigation-item"><a href="news.html">Новости</a></li>
+                  <li class="site-footer__navigation-item"><a href="catalog.html">Каталог</a></li>
+                  <li class="site-footer__navigation-item"><a href="delivery.html">Доставка</a></li>
+                  <li class="site-footer__navigation-item"><a href="contacts.html">Контакты</a></li>
+              </ul>
+              <ul class="site-footer__navigation-bottom-list">
+                <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Материалы</a></li>
+                <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Техника</a></li>
+                <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Инструмент</a></li>
+                <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="special-offers.html">Спецпредложения</a></li>
+              </ul>
+            </nav>
+          </section>
         </div>
-        <nav class="site-footer__navigation">
-          <ul class="site-footer__navigation-top-list">
-            <li class="site-footer__navigation-item site-footer__navigation-item--top"><a href="company.html">Компания</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--top"><a href="news.html">Новости</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--top"><a href="catalog.html">Каталог</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--top"><a href="delivery.html">Доставка</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--top"><a href="contacts.html">Контакты</a></li>
-          </ul>
-          <ul class="site-footer__navigation-bottom-list">
-            <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Материалы</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Техника</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="#">Инструмент</a></li>
-            <li class="site-footer__navigation-item site-footer__navigation-item--bottom"><a href="special-offers.html">Спецпредложения</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section class="site-footer__social">
+        <div class="fill-container fill-container__footer--social">
+          <section class="site-footer__social container">
 <p>© 2010–2019 Компания «Техномарт» 
 Все права защищены</p>
-        <ul class="site-footer__social-icons-list">
-          <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/vk-icon.svg" alt="social-vk"></a></li>
-          <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/fb-icon.svg" alt="social-fb"></a></li>
-          <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/insta-icon.svg" alt="social-inst"></a></li>
-        </ul>
-        <ul class="site-footer__feedback-list">
-          <li class="site-footer__feedback-item">
-              <p>Обратная связь:</p>
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="site-footer__feedback-item">
-            <p>Разработано</p>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-          </li>
-        </ul>
-      </section>
-    </footer>
+            <ul class="site-footer__social-icons-list">
+                <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/vk-icon.svg" alt="social-vk"></a></li>
+                <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/fb-icon.svg" alt="social-fb"></a></li>
+                <li class="site-footer__social-icons-item"><a href=""><img src="img/icons/insta-icon.svg" alt="social-inst"></a></li>
+            </ul>
+            <ul class="site-footer__feedback-list">
+              <li class="site-footer__feedback-item">
+                  <p>Обратная связь:</p>
+                  <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+              <li class="site-footer__feedback-item">
+                  <p>Разработано</p>
+                  <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+    </footer>    
   </body>
-</html>
+</html>  
+
