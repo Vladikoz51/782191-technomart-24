@@ -12,28 +12,25 @@
                 <section class="site-header__search-and-order container">
                 <p class="site-header__site-logo"><a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a></p>
                 <ul class="site-header__search-and-order-list">
-                <li class="site-header__search-field">
-                    <img class="icon search-icon" src="img/icons/icon-search.svg" width="17px" height="17px" alt="search-icon">
-                    <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
-                </li>
-                <li class="site-header__bookmarks">
-                    <img class="icon bookmark-icon" src="img/icons/icon-bookmark.svg" alt="bookmark-icon">
-                    <span>Закладки: 0</span>
-                </li>
-                <li class="site-header__basket">
-                    <img class="icon cart-icon" src="img/icons/cart-icon.svg" alt="cart-icon">
-                    <span>Корзина: 10</span>
-                </li>
-                <li class="site-header__place-order">
-                    <a href="#">Оформить заказ</a>
-                </li>
+                    <li class="site-header__search-field">
+                        <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
+                    </li>
+                    <li class="site-header__bookmarks">
+                        <span>Закладки: 0</span>
+                    </li>
+                    <li class="site-header__basket">
+                        <span>Корзина: 10</span>
+                    </li>
+                    <li class="site-header__place-order">
+                        <a href="#">Оформить заказ</a>
+                    </li>
                 </ul>
             </section>
         </div>
         <div class="fill-container fill-container__header-navigation">
         <section class="site-header__navigation container">
             <div class="site-header">
-            <h1 class="visually-hidden">Техномарт. Главная страница</h1>
+            <h1 class="visually-hidden">Техномарт. Каталог</h1>
             <div class="site-header__contacts-and-user-navigation">
                 <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
                 <div class="site-header__contacts">
@@ -42,13 +39,15 @@
                 </div>
                 <ul class="site-header__user-navigation--authorised">
                   <li class="site-header__user-navigation-item--authorised">
-                    <a href="#">
-                        <img src="img/icons/icon-user.svg" alt="user-icon">
-                        <span>Равшан Джамшутович</span>
-                    </a>
-                    <a href="#">
-                        <img src="img/icons/icon-logout.svg" alt="logout-icon">
-                    </a>
+                    <div class="site-header__user-navigation-item--user-profile">
+                        <a class="" href="#">
+                            <span>Равшан Джамшутович</span>
+                        </a>
+                    </div>
+                    <div class="site-header__user-navigation-item--user-logout">
+                        <a href="#">.</a>
+                    </div>
+                    
                   </li>
                   <li class="site-header__user-order-and-cabinet-links">  
                   <div><a href="#">Мои заказы</a></div>  
@@ -157,8 +156,8 @@
                      <a href="#">По функционалу</a>    
                     </li>
                     <li class="catalog-main__sorting-item">
-                        <button class="catalog-main__sorting-button--ascending" aria-label="по возрастанию"><img src="img/icons/icon-up-dir.svg" alt="ascending-button"></button> 
-                        <button class="catalog-main__sorting-button--descending" aria-label="по убыванию"><img src="img/icons/icon-down-dir.svg" alt="descending-button"></button>
+                        <button class="catalog-main__sorting-button--ascending" aria-label="по возрастанию"></button> 
+                        <button class="catalog-main__sorting-button--descending" aria-label="по убыванию"></button>
                     </li>
                 </ul>
                 <ul class="catalog-main__products-list">
@@ -168,28 +167,28 @@
                         <span class="product-card__previous-price">22500 Р.</span>
                         <span class="product-card__price">15500 Р.</span>
                         <div class="product-card__add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button> 
-                            </div>
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
+                        </div>
                     </li>
                     <li class="product-card  product-card--catalog">
                         <img src="img/perforator-3.png" alt="bosch-bfg-6000">
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 6000</h3>
                         <span class="product-card__previous-price">30500 Р.</span>
                         <span class="product-card__price">25500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                                <button class="product-card-btn product-card-btn__order">Купить</button> 
+                                <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
-                    <li class="product-card  product-card--catalog">
+                    <li class="product-card  product-card--catalog product-card-new">
                         <img src="img/perforator-4.png" alt="bosch-bfg-2000">
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</h3>
                         <span class="product-card__previous-price product-card__previous-price--no-price">###</span> 
                         <span class="product-card__price">12500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
                     <li class="product-card  product-card--catalog">
@@ -197,19 +196,19 @@
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 3000</h3>
                         <span class="product-card__previous-price">22500 Р.</span>
                         <span class="product-card__price">15500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button> 
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
-                    <li class="product-card  product-card--catalog">
+                    <li class="product-card  product-card--catalog product-card-new">
                         <img src="img/perforator-3.png" alt="bosch-bfg-6000">
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 6000</h3>
                         <span class="product-card__previous-price">30500 Р.</span>
                         <span class="product-card__price">25500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
                     <li class="product-card  product-card--catalog">
@@ -217,19 +216,19 @@
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</h3>
                         <span class="product-card__previous-price product-card__previous-price--no-price">###</span> 
                         <span class="product-card__price">12500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
-                    <li class="product-card  product-card--catalog">
+                    <li class="product-card  product-card--catalog product-card-new">
                         <img src="img/perforator-2.png" alt="bosch-bfg-3000">
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 3000</h3>
                         <span class="product-card__previous-price">22500 Р.</span>
                         <span class="product-card__price">15500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button> 
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
                     <li class="product-card  product-card--catalog">
@@ -237,9 +236,9 @@
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 6000</h3>
                         <span class="product-card__previous-price">30500 Р.</span>
                         <span class="product-card__price">25500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
                     <li class="product-card  product-card--catalog">
@@ -247,9 +246,9 @@
                         <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</h3>
                         <span class="product-card__previous-price product-card__previous-price--no-price">###</span> 
                         <span class="product-card__price">12500 Р.</span>
-                        <div class="add-to-bookmarks-and-order">
-                            <button class="product-card____order">Купить</button> 
-                            <button class="product-card__add-to-bookmarks">В закладки</button>
+                        <div class="product-card__add-to-bookmarks-and-order">
+                            <button class="product-card-btn product-card-btn__order">Купить</button> 
+                            <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
                         </div>
                     </li>
                 </ul>
@@ -260,13 +259,15 @@
                     <a class="catalog-main__paginator-item catalog-main__paginator-item--next" href="#">Следующая</a>
                 </div>
                 <div class="catalog-main__card-popup">
-                    <img src="img/icons/icon-add-to-cart.svg" alt="icon-add-to-cart">
-                    <p>Товар добавлен в корзину</p>
+                    <div class="catalog-main__card-popup--add-to-card-message-container">
+                        <img src="img/icons/icon-add-to-cart.svg" alt="icon-add-to-cart">
+                        <p>Товар добавлен в корзину!</p>
+                        <button aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon"></button>
+                    </div>
                     <div class="catalog-main__card-popup-buttons">
                         <a href="#">Оформить заказ</a>
                         <button class="catalog-main__card-popup--continue-button" aria-label="Продолжить покупки">Продолжить покупки</button>
                     </div>
-                    <button aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon"></button>
                 </div>
             </section>
         </div>

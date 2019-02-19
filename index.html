@@ -13,15 +13,12 @@
             <p class="site-header__site-logo"><a href="index.html"><img src="img/icons/technomart.svg" alt="technomart"></a></p>
             <ul class="site-header__search-and-order-list">
               <li class="site-header__search-field">
-                <img class="icon search-icon" src="img/icons/icon-search.svg" width="17px" height="17px" alt="search-icon">
                 <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
               </li>
               <li class="site-header__bookmarks">
-                  <img class="icon bookmark-icon" src="img/icons/icon-bookmark.svg" alt="bookmark-icon">
                   <span>Закладки: 0</span>
               </li>
               <li class="site-header__basket">
-                <img class="icon cart-icon" src="img/icons/cart-icon.svg" alt="cart-icon">
                 <span>Корзина: 10</span>
               </li>
               <li class="site-header__place-order">
@@ -42,7 +39,7 @@
             </div>
             <ul class="site-header__user-navigation">
               <li class="site-header__user-navigation-item">
-                <a href="#"><img src="img/icons/icon-login.svg" alt="login-icon">Войти</a>
+                <a href="#">Войти</a>
               </li>
               <li class="site-header__user-navigation-item">
                 <a href="#">Регистрация</a>
@@ -112,40 +109,40 @@
               <h3 class="product-card__name">Перфоратор BOSCH BFG 9000</h3>
               <p class="product-card__previous-price">25500 Р.</p>
               <div class="product-card__price">32500 Р.</div>
-              <!-- <div class="product-card__add-to-bookmarks-and-order">
-                <button class="product-card____order">Купить</button> 
-                <button class="product-card__add-to-bookmarks">В закладки</button> 
-              </div> -->
+              <div class="product-card__add-to-bookmarks-and-order">
+                  <button class="product-card-btn product-card-btn__order">Купить</button> 
+                  <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
+              </div>
           </li>
           <li class="product-card">
               <img src="img/perforator-2.png" alt="bosch-bfg-3000">
               <h3 class="product-card__name">Перфоратор BOSCH BFG 3000</h3>
               <p class="product-card__previous-price">22500 Р.</p>
               <div class="product-card__price">15500 Р.</div>
-              <!-- <div class="product-card__add-to-bookmarks-and-order">
-                <button class="product-card____order">Купить</button> 
-                <button class="product-card__add-to-bookmarks">В закладки</button> 
-              </div> -->
+              <div class="product-card__add-to-bookmarks-and-order">
+                  <button class="product-card-btn product-card-btn__order">Купить</button> 
+                  <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
+              </div>
           </li>
           <li class="product-card">
               <img src="img/perforator-3.png" alt="bosch-bfg-6000">
               <h3 class="product-card__name">Перфоратор BOSCH BFG 6000</h3>
               <p class="product-card__previous-price">30500 Р.</p>
               <div class="product-card__price">25500 Р.</div>
-              <!-- <div class="add-to-bookmarks-and-order">
-                <button class="product-card____order">Купить</button> 
-                <button class="product-card__add-to-bookmarks">В закладки</button>
-              </div> -->
+              <div class="product-card__add-to-bookmarks-and-order">
+                  <button class="product-card-btn product-card-btn__order">Купить</button> 
+                  <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
+              </div>
           </li>
           <li class="product-card">
               <img src="img/perforator-4.png" alt="bosch-bfg-2000">
               <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</h3>
               <p class="product-card__previous-price product-card__previous-price--no-price">#####</p> 
               <div class="product-card__price">12500 Р.</div>
-              <!-- <div class="add-to-bookmarks-and-order">
-                <button class="product-card____order">Купить</button> 
-                <button class="product-card__add-to-bookmarks">В закладки</button>
-              </div> -->
+              <div class="product-card__add-to-bookmarks-and-order">
+                  <button class="product-card-btn product-card-btn__order">Купить</button> 
+                  <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
+              </div>
           </li>
         </ul>
         </section>
@@ -221,21 +218,35 @@
             <a href="#"><img src="img/map.png" alt="map-image"></a>
             <a class="index-main__btn index-main__btn--contacts" href="#">Заблудились? Напишите нам</a>
           </div>
-        </section >
-        <section class="index-main__map-popup">
-          <button aria-label="Закрыть" ><img src="img/icons/icon-close.svg" alt="close-icon"><!-- карта будет фоном --></button>
-        </section>
-        <section class="index-main__write-us-popup">
-          <form  action="https://echo.htmlacademy.ru">
-            <label for="write-us-popup__name-field">Ваше имя:</label>
-            <input id="write-us-popup__name-field" type="text" name="name">
-            <label for="write-us-popup__mail-field">Ваш e-mail:</label>
-            <input id="write-us-popup__mail-field" type="email" name="email" placeholder="email@example.com">
-            <label for="write-us-popup__letter-content">Текст письма:</label>
-            <textarea name="letter-content" id="write-us-popup__letter-content" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-            <button type="submit">Отправить</button>
-          </form>
-          <button aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon"></button>
+          <section class="index-main__write-us-popup">
+            <form class="index-main__write-us-form"  action="https://echo.htmlacademy.ru">
+              <div class="index-main__write-us-form-fill-container">
+                <ul class="index-main__write-us-form--mail-and-name">
+                  <li class="index-main__write-us-form--field-container">
+                    <label for="write-us-popup__name-field">Ваше имя:</label>
+                    <input id="write-us-popup__name-field" type="text" name="name" placeholder="Имя Фамилия">
+                  </li>
+                  <li class="index-main__write-us-form--field-container">
+                    <label for="write-us-popup__mail-field">Ваш e-mail:</label>
+                    <input id="write-us-popup__mail-field" type="email" name="email" placeholder="email@example.com">
+                  </li>
+                </ul>
+                <div class="index-main__write-us-form--letter-content-container">
+                  <label for="write-us-popup__letter-content">Текст письма:</label>
+                  <textarea name="letter-content" id="write-us-popup__letter-content" rows="5" placeholder="В свободной форме"></textarea>
+                </div>
+              </div>
+              <div class="index-main__write-us-form--submit-fill-container">
+                  <button type="submit">Отправить</button>
+              </div>
+              <button class="index-main__write-us-form__close-button close-button" aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon"></button>
+            </form>
+          </section>
+          <section class="index-main__map-popup">
+            <div class="index-main__map-popup-fill-container">
+              <button class="index-main__map-popup__close-button close-button" aria-label="Закрыть" ><img src="img/icons/icon-close.svg" alt="close-icon"></button>
+            </div>
+          </section>
         </section>
     </main>
     <footer class="site-footer">
