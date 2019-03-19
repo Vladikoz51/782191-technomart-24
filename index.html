@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style(minify).css">
   </head>
   <body>
     <header class="site-header">
@@ -16,10 +16,10 @@
                 <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
               </li>
               <li class="site-header__bookmarks">
-                  <span>Закладки: 0</span>
+                  <a class="site-header__bookmarks-value" href="#"></a>
               </li>
               <li class="site-header__basket">
-                <span>Корзина: 10</span>
+                <a class="site-header__cart-value" href="#"></a>
               </li>
               <li class="site-header__place-order">
                 <a href="#">Оформить заказ</a>
@@ -83,11 +83,12 @@
               <div class="index-main__slider-tagline">
                 <span>Дрели</span>  <p>Cоседям на радость!</p>  
               </div>
-              <img src="img/slide-1.png" alt="slide-1" width="620" height="266">
-              <img class="index-main__slider-slide-hidden" src="img/slide-2.png" alt="slide-2" width="620" height="266">
+              <img class="index-main__slider-current-slide" src="img/slide-1.png" alt="slide-1" width="620" height="266">
               <button class="index-main__slider-switch--next-slide">
                 <img src="img/icons/icon-right.svg" alt="next-slide" width="22" height="40">
               </button>
+              <div class="index-main__slider-switch-indicator index-main__slider-switch-indicator--slider-1 index-main__slider-switch-indicator--active"></div>
+              <div class="index-main__slider-switch-indicator index-main__slider-switch-indicator--slider-2"></div>
               <button class="index-main__slider-switch--previous-slide">
                   <img src="img/icons/icon-left.svg" alt="previous-slide" width="22" height="40">
               </button>
@@ -141,7 +142,7 @@
                   <button class="product-card-btn product-card-btn__add-to-bookmarks">В закладки</button> 
               </div>
           </li>
-          <li class="product-card">
+          <li class="product-card product-card-new">
               <img src="img/perforator-4.png" alt="bosch-bfg-2000" width="218" height="170">
               <h3 class="product-card__name">Перфоратор BOSCH BFG 2000</h3>
               <p class="product-card__previous-price product-card__previous-price--no-price">#####</p> 
@@ -176,8 +177,8 @@
 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <ul class="index-main__services-list">
             <li class="index-main__services-item">
-              <button class="index-main__service-button">Доставка</button>
-              <div class="index-main__services-delivery-annotation">
+              <button class="index-main__service-button" autofocus>Доставка</button>
+              <div class="index-main__services-annotation index-main__services-delivery-annotation">
                 <h3>Доставка</h3>
                 <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!  
                 </p> 
@@ -185,7 +186,7 @@
             </li>
             <li class="index-main__services-item">
               <button class="index-main__service-button">Гарантия</button>
-              <div class="index-main__services-guarantee-annotation">
+              <div class="index-main__services-annotation index-main__services-guarantee-annotation index-main__services-annotation--inactive">
                 <h3>Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит, 
                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
@@ -195,7 +196,8 @@
             </li>
             <li class="index-main__services-item">
               <button class="index-main__service-button">Кредит</button>
-              <div class="index-main__services-credit-annotation">
+              <div class="index-main__services-annotation index-main__services-credit-annotation
+              index-main__services-annotation--inactive">
                 <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще! 
                   Кредитные консультанты придут вам на помощь.
@@ -215,21 +217,12 @@
 Техномарт работает со многими транспортными компаниями: </p>
             <ul class="index-main__partners-list">
               <li class="index-main__partners-item">
-                <svg>
-                  <rect width="25" height="2" fill="#ee3643"></rect>
-                </svg>
                 Деловые линии
               </li>
               <li class="index-main__partners-item">
-                <svg>
-                  <rect width="25" height="2" fill="#ee3643"></rect>
-                </svg>
                   Автотрейдинг
                 </li>
               <li class="index-main__partners-item">
-                <svg>
-                  <rect width="25" height="2" fill="#ee3643"></rect>
-                </svg>
                 ЖелДорЭкспедиция
               </li>
             </ul>
@@ -239,9 +232,40 @@
             <h2>Контакты</h2>
 <p>Вы можете забрать товар сами,
 заехав в наш офис:</p>
-            <a href="#"><img src="img/map.png" alt="map-image" width="300" height="158"></a>
-            <a class="index-main__btn index-main__btn--contacts" href="#">Заблудились? Напишите нам</a>
+            <a class="index-main__contacts-adress-on-map"><img src="img/map.png" alt="map-image" width="300" height="158"></a>
+            <a class="index-main__btn index-main__btn--contacts">Заблудились? Напишите нам</a>
           </div>
+          <section class="index-main__map-popup visually-hidden" >
+            <div class="index-main__map-popup-fill-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.32089461588736!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1552930622917" width="970" height="476" frameborder="0" style="border:0" allowfullscreen>
+              </iframe>
+              <button class="index-main__map-popup__close-button close-button" aria-label="Закрыть" ><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
+            </div>
+          </section>
+          <section class="index-main__write-us-popup visually-hidden">
+            <form class="index-main__write-us-form"  action="https://echo.htmlacademy.ru">
+              <div class="index-main__write-us-form-fill-container">
+                <ul class="index-main__write-us-form--mail-and-name">
+                  <li class="index-main__write-us-form--field-container">
+                    <label for="write-us-popup__name-field">Ваше имя:</label>
+                    <input id="write-us-popup__name-field" type="text" name="name" placeholder="Имя Фамилия">
+                  </li>
+                  <li class="index-main__write-us-form--field-container">
+                    <label for="write-us-popup__mail-field">Ваш e-mail:</label>
+                    <input id="write-us-popup__mail-field" type="email" name="email" placeholder="email@example.com">
+                  </li>
+                </ul>
+                <div class="index-main__write-us-form--letter-content-container">
+                  <label for="write-us-popup__letter-content">Текст письма:</label>
+                  <textarea name="letter-content" id="write-us-popup__letter-content" rows="5" placeholder="В свободной форме"></textarea>
+                </div>
+              </div>
+              <div class="index-main__write-us-form--submit-fill-container">
+                  <button type="submit">Отправить</button>
+              </div>
+              <button class="index-main__write-us-form__close-button close-button" aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
+            </form>
+          </section>
         </section>
     </main>
     <footer class="site-footer">
@@ -284,42 +308,14 @@
                   <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
               <li class="site-footer__feedback-item">
-                  <p>Разработано</p>
+                  <p>Разработано -</p>
                   <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
               </li>
             </ul>
           </section>
         </div>
     </footer>
-    <section class="index-main__write-us-popup visually-hidden">
-      <form class="index-main__write-us-form"  action="https://echo.htmlacademy.ru">
-        <div class="index-main__write-us-form-fill-container">
-          <ul class="index-main__write-us-form--mail-and-name">
-            <li class="index-main__write-us-form--field-container">
-              <label for="write-us-popup__name-field">Ваше имя:</label>
-              <input id="write-us-popup__name-field" type="text" name="name" placeholder="Имя Фамилия">
-            </li>
-            <li class="index-main__write-us-form--field-container">
-              <label for="write-us-popup__mail-field">Ваш e-mail:</label>
-              <input id="write-us-popup__mail-field" type="email" name="email" placeholder="email@example.com">
-            </li>
-          </ul>
-          <div class="index-main__write-us-form--letter-content-container">
-            <label for="write-us-popup__letter-content">Текст письма:</label>
-            <textarea name="letter-content" id="write-us-popup__letter-content" rows="5" placeholder="В свободной форме"></textarea>
-          </div>
-        </div>
-        <div class="index-main__write-us-form--submit-fill-container">
-            <button type="submit">Отправить</button>
-        </div>
-        <button class="index-main__write-us-form__close-button close-button" aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
-      </form>
-    </section>
-    <section class="index-main__map-popup visually-hidden" >
-      <div class="index-main__map-popup-fill-container">
-        <button class="index-main__map-popup__close-button close-button" aria-label="Закрыть" ><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
-      </div>
-    </section>    
+    <script src="js/script-index(minify).js"></script>    
   </body>
 </html>  
 

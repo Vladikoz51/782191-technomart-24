@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт каталог</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style(minify).css">
   </head>
   <body>
     <header class="site-header">
@@ -13,13 +13,13 @@
                 <p class="site-header__site-logo"><a href="index.html"><img src="img/icons/technomart.svg" alt="technomart" width="110" height="18"></a></p>
                 <ul class="site-header__search-and-order-list">
                     <li class="site-header__search-field">
-                        <input type="search" name="search-field" id="search-field" placeholder="Поиск:">
+                        <input form="filter-form" type="search" name="search-field" id="search-field" placeholder="Поиск:">
                     </li>
                     <li class="site-header__bookmarks">
-                        <span>Закладки: 0</span>
+                        <a class="site-header__bookmarks-value" href="#"></a>
                     </li>
                     <li class="site-header__basket">
-                        <span>Корзина: 10</span>
+                        <a class="site-header__cart-value" href="#"></a>
                     </li>
                     <li class="site-header__place-order">
                         <a href="#">Оформить заказ</a>
@@ -30,7 +30,7 @@
         <div class="fill-container fill-container__header-navigation">
         <section class="site-header__navigation container">
             <div class="site-header">
-            <h1 class="visually-hidden">Техномарт. Каталог</h1>
+            <h2 class="visually-hidden">Техномарт. Каталог</h2>
             <div class="site-header__contacts-and-user-navigation site-header__contacts-and-user-navigation--catalog">
                 <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
                 <div class="site-header__contacts">
@@ -50,11 +50,12 @@
                     
                   </li>
                   <li class="site-header__user-order-and-cabinet-links">  
-                  <div><a href="#">Мои заказы</a></div>  
-                    <svg width="4" height="4" >
-                        <circle r="2" cx="50%" cy="50%" fill="#32425c"/>
-                    </svg>
-                  <div><a href="#">Личный кабинет</a></div> 
+                  <div class="site-header__user-orders">
+                      <a href="#">Мои заказы</a>
+                  </div>  
+                  <div class="site-header__user-cabinet">
+                      <a href="#">Личный кабинет</a>
+                  </div> 
                   </li>
                 </ul>
             </div>
@@ -84,19 +85,20 @@
             <h1 class="container">Перфораторы</h1>
         </div>
         <div class="catalog-main__filters-and-products container">
-            <form class="catalog-main__filters">
+            <form id="filter-form" class="catalog-main__filters" action="https://echo.htmlacademy.ru">
                 <h2 >Фильтр:</h2>
                 <fieldset class="catalog-main__price-filter">
                     <legend>Цена:</legend>
                     <div class="price-range-field-container"> 
-                        <input type="range" name="price-range" id="price-range-field">
+                        <input type="range" name="price-range" id="price-range-field" min = "0" max="30000" oninput="priceRange()">
+                        <div class="price-range-field-rail"></div>
                     </div>
                     <div class="catalog-main__min-and-max-price-fields">
                         <div class="min-price-field-container">
-                            <input type="number" name="min-price" id="min-price-field">
-                        </div>
+                            <input class="price-field" type="number" name="min-price" id="min-price-field" min= "0" max="30000" value = "0" oninput="priceMin()">
+                        </div> 
                         <div class="max-price-field-container">
-                            <input type="number" name="max-price" id="max-price-field">
+                            <input class="price-field" type="number" name="max-price" id="max-price-field" min= "0" value="30000" max="30000">
                         </div>
                     </div> 
                 </fieldset>
@@ -263,7 +265,7 @@
         <div class="fill-container fill-container__catalog-main--product-info">
             <section class="catalog-main__product-info container">
                 <h2 class="catalog-main__product-info-headline">Пара слов о перфораторах</h2>
-                <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
                     Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
             </section>
         </div>
@@ -319,12 +321,13 @@
         <div class="catalog-main__card-popup--add-to-card-message-container">
             <img src="img/icons/icon-add-to-cart.svg" alt="icon-add-to-cart" width="66" height="66">
             <p>Товар добавлен в корзину!</p>
-            <button aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
+            <button class="catalog-main__card-popup-close-button" aria-label="Закрыть"><img src="img/icons/icon-close.svg" alt="close-icon" width="21" height="21"></button>
         </div>
         <div class="catalog-main__card-popup-buttons">
             <a href="#">Оформить заказ</a>
             <button class="catalog-main__card-popup--continue-button" aria-label="Продолжить покупки">Продолжить покупки</button>
         </div>
-    </div>    
+    </div>  
+    <script src="js/script-catalog(minify).js"></script>  
     </body>
 </html>
